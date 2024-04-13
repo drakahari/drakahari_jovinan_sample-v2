@@ -1,7 +1,7 @@
 <!DOCTZYPE html>
 <html>
   <head>
-     <title>Jovian Careers</title>
+     <title>Drakahari Careers</title>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -11,7 +11,7 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
-    
+        margin-bottom: 16px;
 
         
       }
@@ -20,14 +20,23 @@
   </head>
   <body>
     {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="/static/banner.jpg">
+    
       <div class="container">
       <h1 class="text-center mt-2 mb-4">
         {{company_name}} Careers</h1>
-      <img class="img-fluid" id="banner" src="/static/banner.jpg">
-      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+      
+      </h1>
+        <div class="row" style="margin-bottom:16px">
+          <div class="col-md-6">
       <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Eget duis at tellus at. Nunc id cursus metus aliquam eleifend mi in. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Ut pharetra sit amet aliquam id. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Semper quis lectus nulla at. In nibh mauris cursus mattis molestie. Fringilla urna porttitor rhoncus dolor. Id diam maecenas ultricies mi eget mauris pharetra. Urna neque viverra justo nec. Facilisis volutpat est velit egestas dui id ornare. Leo in vitae turpis massa sed elementum tempus egestas sed. Enim tortor at auctor urna. Sagittis purus sit amet volutpat consequat mauris nunc congue nisi. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna.
       </p>
+          </div>
+          <div class="d-none d-md-block col-md-6">
+        <img src="static/people_working.jpg" style="height:320px; border-radius:4px;">
+          </div>
+        </div>    
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div>
         {% for job in jobs %}
@@ -37,7 +46,7 @@
       </div>
         <div class="text-center">
           
-        <button class="btn btn-primary btn-lg"">Contact Us</button>
+        <a class="btn btn-primary btn-lg" href= mailto:hello@drakahari.com?subject=Question%20about%20Job%20Openings&body=My%20Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20enter%20question%20here%3E%0D%0A%0D%0A%0D%0A%0D%0A ">Contact Us</a>
           
         </div>
       </div>
