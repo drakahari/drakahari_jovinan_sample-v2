@@ -13,4 +13,14 @@ engine = create_engine(
 
 with engine.connect() as conn:
   result = conn.execute(text("select * from jobs"))
-  print(result.all())
+  print("type(result):", type(result))
+  result_all = result.all()
+  print("type(result.all()):" , type(result_all))
+  ##print("result.all():" , result_all)
+  first_result = result_all[0]
+  ##print(type(result_all[0]))
+  print("type(first_result):" , type(first_result))
+  ##first_result_dict = dict(result_all[0]) does not work need alternate method
+  first_result_dict = result_all[0]._asdict()
+  print("type(first_result_dict):" , type(first_result_dict))
+  print(first_result_dict)
