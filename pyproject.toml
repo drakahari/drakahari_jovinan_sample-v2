@@ -9,6 +9,8 @@ packages = [{include = "repl_nix_samplejoviantutorial"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.2"
+mysql-connector-python = "^8.3.0"
+sqlalchemy = "^2.0.29"
 
 
 [build-system]
