@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
+import os
 
-db_connection_string = "mysql+pymysql://drak:Thispassword!!@drakahari.mysql.database.azure.com/drakaharicareers?charset=utf8mb3"
+db_connection_string = os.environ['DB_CONNECTION_STRING']
 
 
 engine = create_engine(
