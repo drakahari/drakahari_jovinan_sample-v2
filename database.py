@@ -1,4 +1,5 @@
 from sqlalchemy import create_engine, text
+
 import os
 
 db_connection_string = os.environ['DB_CONNECTION_STRING']
@@ -24,6 +25,18 @@ engine = create_engine(
   ##first_result_dict = result_all[0]._asdict()
   ##print("type(first_result_dict):" , type(first_result_dict))
   ##print(first_result_dict)
+def load_applications_from_db():
+  with engine.connect() as conn:
+    result = conn.execute(text("SELECT * FROM applications"))
+    applications = [row._asdict() for row in result]
+    return applications
+
+
+
+
+
+
+
 
 def load_jobs_from_db():
   with engine.connect() as conn:
@@ -41,6 +54,7 @@ def load_job_from_db(id):
         return None
       else:
         return rows[0]._asdict()
+        
     
     
 def add_application_to_db(job_id, data):
@@ -56,10 +70,10 @@ def add_application_to_db(job_id, data):
                          'resume_url': data['resume_url']})
     conn.commit()
    
-  
+
 
   
-        
+       
         
         
         ##result_dicts.append(row._mapping)
