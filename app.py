@@ -12,8 +12,8 @@ app = Flask(__name__)
 def hello_world():
   jobs = load_jobs_from_db()
   return render_template('home.html', 
-                         jobs=jobs,
-                         company_name='Drakahari')
+                         jobs=jobs)
+                         
 
 @app.route("/api/jobs")
 def list_jobs():
