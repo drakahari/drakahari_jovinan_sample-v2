@@ -54,7 +54,7 @@ def add_application_to_db(job_id, data):
                          'education': data['education'],
                          'work_experience': data['work_experience'],
                          'resume_url': data['resume_url']})
-
+    conn.commit()
    
   
 
