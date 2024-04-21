@@ -34,7 +34,7 @@ def load_applications_from_db():
 
 def add_job_to_db(data):
   with engine.connect() as conn:
-    query = text("INSERT INTO jobs (id, title, location, salary, currency, responsibilities, requirements) VALUES (:id, :title, :location, :salary, :currency, :responsibilities, :requirements)")
+    query = text("INSERT INTO jobs (id, title, location, salary, currency, responsibilities, requirements) VALUES (:'id', :'title', :'location', :'salary', :'currency', :'responsibilities', :'requirements')")
     conn.execute(query, {'id': data['id'],
                          'title': data['title'],
                          'location': data['location'],
@@ -95,3 +95,7 @@ def add_application_to_db(job_id, data):
 
 
 ##print(result_dicts)
+
+
+
+# Open a connection

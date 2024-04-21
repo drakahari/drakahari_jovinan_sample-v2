@@ -4,25 +4,33 @@
     <title>Add Job</title>
 </head>
 <body>
-    <form method="POST">
-        
-        <label for="job_title">Title:</label><br>
-        <input type="text" id="title" name="title"><br>
-        <label for="location">Location:</label><br>
-        <input type="text" id="location" name="location"><br>
-        <label for="salary">Salary:</label><br>
-        <input type="text" id="salary" name="salary"><br>
-        <label for="currency">Currency:</label><br>
-        <input type="text" id="currency" name="currency"><br>
-        <label for="responsibilities">Responsibilities:</label><br>
-        <input type="text" id="responsibilities" name="responsibilities"><br>
-        <label for="requirements">Requirements:</label><br>
-        <input type="text" id="requirements" name="requirements"><br>
-
-
-
-      
-        <input type="submit" value="Submit">
+    <form method="post">
+        <div class="mb-2">  
+            <label>Title</label><br>
+            <input type="text" required name="title" placeholder="Job Title" />
+        </div>
+        <div class="mb-2">
+            <label>Location</label><br>
+            <input type="text" required name="location" placeholder="Location" />
+        </div>
+        <div class="mb-2">
+            <label>Salary</label><br>
+            <input type="number" required name="salary" placeholder="10000" />
+        </div>  
+        <div class="mb-2">
+            <label>Currency</label><br>
+            <input type="text" required name="currency" placeholder="Rs. $" />
+        </div>
+        <div class="mb-2">
+            <label>Responsibilities</label><br>
+            <textarea name="responsibilities"></textarea>
+        </div>  
+        <div class="mb-2">
+            <label>Requirements</label><br>
+            <textarea name="requirements"></textarea>
+        </div>  
+        <br><button type="submit" class="btn btn-primary">Submit</button></br>
     </form>
 </body>
 </html>
+
