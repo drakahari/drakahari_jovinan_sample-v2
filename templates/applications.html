@@ -2,29 +2,37 @@
 <html>
 <head>
     <title>Applications</title>
+    {% include 'bootstrap.html' %}
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Job ID</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>LinkedIn URL</th>
-            <th>Education</th>
-            <th>Work Experience</th>
-            <th>Resume URL</th>
-        </tr>
-        {% for application in applications %}
-        <tr>
-            <td>{{ application.job_id }}</td>
-            <td>{{ application.full_name }}</td>
-            <td>{{ application.email }}</td>
-            <td>{{ application.linkedin_url }}</td>
-            <td>{{ application.education }}</td>
-            <td>{{ application.work_experience }}</td>
-            <td>{{ application.resume_url }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>LinkedIn URL</th>
+                    <th>Education</th>
+                    <th>Work Experience</th>
+                    <th>Resume URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for application in applications %}
+                <tr>
+                    <td>{{ application.job_id }}</td>
+                    <td>{{ application.full_name }}</td>
+                    <td>{{ application.email }}</td>
+                    <td>{{ application.linkedin_url }}</td>
+                    <td>{{ application.education }}</td>
+                    <td>{{ application.work_experience }}</td>
+                    <td>{{ application.resume_url }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
+
