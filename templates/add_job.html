@@ -2,35 +2,51 @@
 <html>
 <head>
     <title>Add Job</title>
+    {% include 'bootstrap.html' %}
+    <style>
+        .center-screen {
+            display: flex;
+            justify-content: center;
+            
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
+  {% include 'nav.html' %}
+  {% include 'banner.html' %}
+  <div class="center-screen">
     <form method="post">
         <div class="mb-2">  
-            <label>Title</label><br>
+            <b>Title</b><br>
             <input type="text" required name="title" placeholder="Job Title" />
         </div>
         <div class="mb-2">
-            <label>Location</label><br>
+            <b>Location</b><br>
             <input type="text" required name="location" placeholder="Location" />
         </div>
         <div class="mb-2">
-            <label>Salary</label><br>
+            <b>Salary</b><br>
             <input type="number" required name="salary" placeholder="10000" />
         </div>  
         <div class="mb-2">
-            <label>Currency</label><br>
+            <b>Currency</b><br>
             <input type="text" required name="currency" placeholder="Rs. $" />
         </div>
         <div class="mb-2">
-            <label>Responsibilities</label><br>
+            <b>Responsibilities</b><br>
             <textarea name="responsibilities"></textarea>
         </div>  
         <div class="mb-2">
-            <label>Requirements</label><br>
+            <b>Requirements</b><br>
             <textarea name="requirements"></textarea>
         </div>  
         <br><button type="submit" class="btn btn-primary">Submit</button></br>
     </form>
+  </div>
+  {%include 'footer.html'%}
 </body>
 </html>
+
+
 
