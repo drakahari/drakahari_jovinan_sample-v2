@@ -5,6 +5,7 @@ import os
 db_connection_string = os.environ['DB_CONNECTION_STRING']
 
 
+
 engine = create_engine(
   db_connection_string,
   connect_args={
@@ -30,6 +31,14 @@ def load_applications_from_db():
     result = conn.execute(text("SELECT * FROM applications"))
     applications = [row._asdict() for row in result]
     return applications
+
+def add_job_to_db(data):
+  with engine.connect() as conn:
+    query = text("INSERT INTO jobs (job_id, job_title, job_description) VALUES (:job_id, :job_title, :job_description)")
+    conn.execute(query, {'job_id': data['job_id'],
+                         'job_title': data['job_title'],
+                         'job_description': data['job_description']})
+    conn.commit()
 
 
 

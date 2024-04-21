@@ -1,14 +1,30 @@
 from flask import Flask, render_template, jsonify, request
-from database import load_jobs_from_db, load_job_from_db, add_application_to_db, load_applications_from_db
-
+from database import load_jobs_from_db, load_job_from_db, add_application_to_db, load_applications_from_db, add_job_to_db
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
+import os
 
 app = Flask(__name__)
+auth = HTTPBasicAuth()
 
 
+users = {
+  os.environ['ADMIN_USERNAME']: generate_password_hash(os.environ['ADMIN_PASSWORD'])
+}
 
+@auth.verify_password
+def verify_password(username, password):
+    if username in users and check_password_hash(users.get(username), password):
+        return username
 
-
-
+@app.route("/add_job", methods=['GET', 'POST'])
+@auth.login_required
+def add_job():
+    if request.method == 'POST':
+        data = request.form
+        add_job_to_db(data)
+        return 'Job added successfully!'
+    return render_template('add_job.html')
 
 
 @app.route("/")
