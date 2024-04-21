@@ -33,17 +33,18 @@ def load_applications_from_db():
     return applications
 
 def add_job_to_db(data):
-  with engine.connect() as conn:
-    query = text("INSERT INTO jobs (id, title, location, salary, currency, responsibilities, requirements) VALUES (:'id', :'title', :'location', :'salary', :'currency', :'responsibilities', :'requirements')")
-    conn.execute(query, {'id': data['id'],
-                         'title': data['title'],
-                         'location': data['location'],
-                         'salary': data['salary'],
-                         'currency': data['currency'],
-                         'responsibilities': data['responsibilities'],
-                         'requirements': data['requirements']
-                         })
-    conn.commit()
+    with engine.connect() as conn:
+        query = text("INSERT INTO jobs (title, location, salary, currency, responsibilities, requirements) VALUES (:title, :location, :salary, :currency, :responsibilities, :requirements)")
+        conn.execute(query, {
+            'title': data['title'],
+            'location': data['location'],
+            'salary': data['salary'],
+            'currency': data['currency'],
+            'responsibilities': data['responsibilities'],
+            'requirements': data['requirements']
+        })
+        conn.commit()
+
 
 
 
