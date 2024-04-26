@@ -55,8 +55,8 @@ def applications():
 
 @app.route("/about")
 def about():
-    applications = load_applications_from_db()
     return render_template('about.html')
+
 
 
 
