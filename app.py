@@ -53,6 +53,10 @@ def applications():
     applications = load_applications_from_db()
     return render_template('applications.html', applications=applications)
 
+@app.route("/about")
+def about():
+    applications = load_applications_from_db()
+    return render_template('about.html')
 
 
 
@@ -69,6 +73,8 @@ def apply_to_job(id):
   data = request.form
   job = load_job_from_db(id)
   add_application_to_db(id, data)
+
+
   
   # store this data in the database
   # send an email
