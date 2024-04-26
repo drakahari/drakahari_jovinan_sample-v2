@@ -57,7 +57,9 @@ def applications():
 def about():
     return render_template('about.html')
 
-
+@app.route("/tech")
+def tech():
+    return render_template('tech.html')
 
 
 
