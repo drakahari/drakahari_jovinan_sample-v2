@@ -10,11 +10,25 @@
             
             height: 100vh;
         }
+
+       li {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
   {% include 'nav.html' %}
   {% include 'banner.html' %}
+  <!-- Add categories list here -->
+  <div class="container my-4">
+    <ul class="list-group">
+      <li class="list-group-item">Please complete this form and then click submit to add a new position to be posted on drakahari.com.</li>
+      <li class="list-group-item">Please enter information in all required fields</li>
+      <!--<li class="list-group-item">Category 3</li> -->
+      <!-- Add more categories as needed -->
+    </ul>
+  </div>
+  
   <div class="center-screen">
     <form method="post">
         <div class="mb-2">  
