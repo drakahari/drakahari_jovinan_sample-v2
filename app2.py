@@ -1,3 +1,5 @@
+# importing from flask module the Flask class, the render_template function, the request function, url_for 
+# and redirect function to redirect to index home page after updating the app database
 from flask import Flask, render_template, request, url_for, redirect 
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -33,11 +35,6 @@ todos = db.todos
 
 @app.route("/", methods=('GET', 'POST'))
 def index():
-    jobs = load_jobs_from_db()
-    return render_template('home.html', jobs=jobs)
-
-@app.route("/mongo", methods=('GET', 'POST'))
-def mongo():
     if request.method == "POST":
         content = request.form['content']
         degree = request.form['degree']
@@ -59,6 +56,11 @@ def add_job():
         add_job_to_db(data)
         return 'Job added successfully!'
     return render_template('add_job.html')
+
+@app.route("/")
+def hello_world():
+  jobs = load_jobs_from_db()
+  return render_template('home.html', jobs=jobs)
 
 @app.route("/api/jobs")
 def list_jobs():
@@ -96,6 +98,10 @@ def jira():
 @app.route("/tools")
 def tools():
     return render_template('tools.html')
+  
+@app.route("/mongo")
+def mongo():
+    return render_template('mongo.html')
 
 @app.route("/api/job/<id>")
 def show_job_json(id):
