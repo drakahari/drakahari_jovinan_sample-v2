@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Acknowledgement</title>
+
+    <!-- Include Bootstrap -->
+    {% include 'bootstrap.html' %}
+
+    <!-- Add link to CSS file if needed -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <!-- Navigation bar -->
+    {% include 'nav.html' %}
+
+    <!-- Banner -->
+    {% include 'banner.html' %}
+
+  <!-- Image -->
+<div class="d-flex justify-content-left">
+    <div class="col-md-6">
+        <img src="static/jira.jpg" style="height:720px; border-radius:4px;">
+    </div>
+</div>
+  
+    <!-- Acknowledgement section -->
+    <div class="acknowledgement p-5" style="text-align: left; padding: 20px;">
+        <!-- User stories and acceptance criteria -->
+        <h2>User Stories and Acceptance Criteria</h2>
+        <p>
+            <!-- Display Open Positions -->
+            <h3>User Story: Display Open Positions</h3>
+            <strong>As a</strong>: Job Seeker<br>
+            <strong>I want</strong>: To view all open positions on the website<br>
+            <strong>So that</strong>: I can find jobs that match my skills and interests<br>
+            <h4>Acceptance Criteria: Display Open Positions</h4>
+            - The website should display a list of all open positions.<br>
+            - Each position should include details such as job title, job description, location, and requirements.<br>
+            - The list should be updated in real-time as new positions are added.<br>
+            <br>
+
+            <!-- Apply for Jobs -->
+            <h3>User Story: Apply for Jobs</h3>
+            <strong>As a</strong>: Job Seeker<br>
+            <strong>I want</strong>: To apply for open positions on the website<br>
+            <strong>So that</strong>: I can be considered for the job roles that interest me<br>
+            <h4>Acceptance Criteria: Apply for Jobs</h4>
+            - Job seekers should be able to click on an open position to view more details.<br>
+            - There should be an “Apply” button on the detailed view of the job.<br>
+            - Clicking the “Apply” button should open a form where job seekers can fill in their details and upload their resume.<br>
+            - After submitting the form, job seekers should receive a confirmation message.<br>
+            <br>
+
+          <!-- Review App Status -->
+            <h3>User Story: View Application List</h3>
+            <strong>As a</strong>: Job Seeker<br>
+            <strong>I want</strong>: To be able to view if my application was submitted<br>
+            <strong>So that</strong>: I can be be ensured that my application was submitted<br>
+            <h4>Acceptance Criteria: View Application List</h4>
+            - Job seekers should be able to view if their application was added to the queue.<br>
+            <br>
+            
+            <!-- Post New Positions -->
+            <h3>User Story: Post New Positions</h3>
+            <strong>As a</strong>: Staff Member<br>
+            <strong>I want</strong>: To post new job openings on the website<br>
+            <strong>So that</strong>: We can attract and recruit suitable candidates for our open positions<br>
+            <h4>Acceptance Criteria: Post New Positions</h4>
+            - Staff members should have a separate interface or login that allows them to post new jobs.<br>
+            - The job posting interface should include fields for job title, job description, location, and requirements.<br>
+            - After submitting a new job post, staff members should see the new job listed in the open positions.<br>
+            <br>
+
+            <!-- Manage Job Applications -->
+            <h3>User Story: Manage Job Applications</h3>
+            <strong>As a</strong>: Staff Member<br>
+            <strong>I want</strong>: To access and manage job applications from the website’s database<br>
+            <strong>So that</strong>: We can review applications, shortlist candidates, and manage the recruitment process efficiently<br>
+            <h4>Acceptance Criteria: Manage Job Applications</h4>
+            - Staff members should be able to view a list of all job applications from the website’s database.<br>
+            - The list should include details such as the applicant’s name, contact information, the position they applied for, and a link to download their resume.<br>
+            - Staff members should have options to shortlist, reject, or move applicants to the next stage of the recruitment process.<br>
+            <br>
+        </p>
+    </div>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+</body>
+</html>

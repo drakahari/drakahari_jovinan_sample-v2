@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Directions</title>
+
+    <!-- Include Bootstrap -->
+    {% include 'bootstrap.html' %}
+
+    <!-- Add link to CSS file if needed -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <!-- Navigation bar -->
+    {% include 'nav.html' %}
+
+    <!-- Banner -->
+    {% include 'banner.html' %}
+
+    <!-- Acknowledgement section -->
+    <div class="container my-5">
+        <div class="acknowledgement p-5 bg-light rounded">
+            <h2>Instructions</h2>
+            <ul>
+                <li>From drakahari.com, select the apply link on any of the open positions.
+                    <ul>
+                        <li>Some fields are required: Full Name, Email, Linkedin (must use a URL)</li>
+                    </ul>
+                </li>
+                <li>If submitted properly, a confirmation screen will be displayed.</li>
+                <li>Now select the Review App Status link from the footer section @ drakahari.com.
+                    <ul>
+                        <li>You should now see that your application information has been added to the queue of applications!</li>
+                    </ul>
+                </li>
+                <li>Now to test admin functionality by adding additional positions the availability screen.
+                    <ul>
+                        <li>Select Admin in the footer section of drakahari.com.</li>
+                        <li>This is password protected and the username is admin and the password is admin (kept simple for testing purposes). Please feel free to use incognito mode if you want to make multiple entries to the database.</li>
+                        <li>After entering all of the relevant job data, hit submit.</li>
+                        <li>You will now see a screen that Job added successfully! Check on drakahari.com to see if the position was in fact added.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+</body>
+</html>

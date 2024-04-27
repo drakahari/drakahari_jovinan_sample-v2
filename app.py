@@ -57,9 +57,22 @@ def applications():
 def about():
     return render_template('about.html')
 
-@app.route("/tech")
-def tech():
-    return render_template('tech.html')
+@app.route("/ack")
+def ack():
+    return render_template('ack.html')
+
+
+@app.route("/dir")
+def dir():
+    return render_template('dir.html')
+
+@app.route("/jira")
+def jira():
+    return render_template('jira.html')
+
+@app.route("/tools")
+def tools():
+    return render_template('tools.html')
 
 
 

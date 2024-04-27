@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Acknowledgements</title>
+
+    <!-- Include Bootstrap -->
+    {% include 'bootstrap.html' %}
+
+    <!-- Add link to CSS file if needed -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <!-- Add internal CSS for body background color -->
+    <style>
+        .acknowledgement p {
+            text-indent: 50px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    {% include 'nav.html' %}
+
+    <!-- Banner -->
+    {% include 'banner.html' %}
+
+    <!-- Acknowledgement section -->
+    <div class="container my-5">
+        <div class="acknowledgement p-5 bg-light rounded">
+            <h2 class="mb-4">Acknowledgements</h2>
+            <p>I owe a great deal of thanks to aakasshns for posting a very good tutorial that was recommended to me at <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp.org</a>. You can check out this <a href="https://www.youtube.com/watch?v=yBDHkveJUf4" target="_blank">YouTube video</a> for more information. The Jovian Careers tutorial was very useful when trying to understand full-stack development. I kept many of the elements that were presented in that tutorial as it helped me navigate errors in the code and to get a better handle on how to format my python route calls.</p>
+
+            <p>I was able to get hands-on experience with bootstrap, HTML, CSS, JSON, Python (Flask framework), SQLAlchemy, and JavaScript. I learned a lot about the basics of Python and how to use it in a real-world scenario of a web application. Being able to GET and POST data to/from a database and troubleshoot issues as they arise has been very valuable.</p>
+
+            <p>Most notably, I learned a great deal about version control (important to hide password credentials...), database creation, database migration, environment variables and database queries. I had to make several edits to my code in order to get the database features to work as intended with my Azure cloud database.</p>
+
+            <p>I am also grateful for a fantastic tutorial that I watched on Youtube from a creator Brian Design at <a href="https://www.youtube.com/watch?v=FazgJVnrVuI" target="_blank">YouTube video</a>. This allowed me to get significant practice at entering code by hand for an entire styles.css file. I also kept the images and format very close to what was presented to better enable debugging and troubleshooting.</p>
+
+          <p>I am also grateful for the help that AI provided with this project. I was able to utilize Copilot to check my code and to help organize the code as it evolved. This is a very powerful tool that also helped me figure out proper database calls and python route navigation for my linked pages.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+</body>
+</html>
+
