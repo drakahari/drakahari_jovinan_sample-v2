@@ -16,6 +16,14 @@
 
     <!-- Banner -->
     {% include 'banner.html' %}
+  <!-- Add inline CSS to control the image size and position -->
+    <style>
+        .footer-image {
+            max-height: 200px;  /* Adjust as needed */
+            position: relative;
+            left: -50px;  /* Adjust as needed */
+        }
+    </style>
 </head>
 <body>
 
@@ -27,11 +35,17 @@
         <li>For hosting the website, I am using <a href="https://www.render.com/" target="_blank">Render.com.</a></li>
         <li>For version control I utilized <a href="https://www.github.com/" target="_blank">Github.</a></li>
         <li>My repository for the career website full-stack application is located at <a href="https://github.com/drakahari/drakahari_jovinan_sample-v2/" target="_blank">Drakahari Carrers Repository.</a></li>
+        <li>To view all of my repositories please click this link <a href="https://github.com/drakahari" target="_blank">Drakahari Github  Repository.</a></li>
         <li>My repository for the handcrafted about page utilizing styles.css is located at <a href="https://github.com/drakahari/Sample_Site_Tutorial" target="_blank">Sample Site Tutorial Github Respository.</a></li>
+        <li>My repository for the inital configuration of code for my attempt at Flask-MongoDB integration is located at <a href="https://github.com/drakahari/todo_flask_mongo" target="_blank">Todo Flask Mongo.</a></li>
         <li>The relational database that I am using is MySQL hosted on Microsoft Azure.</li>
-        <li>I utilize MySQL WORKBENCH to configure my database.</li>
+        <li>The NoSQL database that I am using is MongoDB hosted on MongoDB Atlas.</li>
+        <li>I utilize MySQL WORKBENCH to configure and edit my MySQL database and MongoDB Compass to configure and edit my Mongo database.</li>
       
-        <!-- Add more tools as needed -->
+        <!-- Image above the footer -->
+ <div class="container text-center my-5"> <!-- Bootstrap classes for center alignment and margin -->
+   <img src="{{ url_for('static', filename='db.jpg') }}" class="img-fluid" alt="Database Image"> <!-- Bootstrap class for responsive image -->
+ </div>
     </ul>
   </div>
  </div>
