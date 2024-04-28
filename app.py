@@ -97,6 +97,10 @@ def jira():
 def tools():
     return render_template('tools.html')
 
+@app.route("/dbpics")
+def dbpics():
+    return render_template('dbpics.html')
+
 @app.route("/api/job/<id>")
 def show_job_json(id):
   job = load_job_from_db(id)
